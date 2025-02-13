@@ -1,0 +1,4 @@
+bin/
+kernel.elf
+kernel.map
+.idea/
