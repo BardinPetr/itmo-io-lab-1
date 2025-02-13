@@ -13,3 +13,9 @@ int strlen(const char *);
 int strncmp(const char *, const char *, size_t);
 
 char *strncpy(char *, const char *, int);
+
+int printf(char *fmt, ...);
+
+void readline(char *buf, int buf_size);
+
+int atoi(const char*);

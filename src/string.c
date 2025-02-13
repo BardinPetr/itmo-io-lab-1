@@ -2,7 +2,7 @@
 
 void *memset(void *dst, char val, size_t cnt) {
     char *cdst = dst;
-    int i;
+    size_t i;
     for (i = 0; i < cnt; i++) {
         cdst[i] = val;
     }
@@ -62,6 +62,13 @@ char *strncpy(char *s, const char *t, int n) {
 int strlen(const char *s) {
     int n;
     for (n = 0; s[n]; n++);
+    return n;
+}
+
+int atoi(const char *s) {
+    int n = 0;
+    while ('0' <= *s && *s <= '9')
+        n = n * 10 + *s++ - '0';
     return n;
 }
 

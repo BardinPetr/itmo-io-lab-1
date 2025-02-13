@@ -17,6 +17,7 @@ kernel.elf: kernel.ld ${SOURCES}
 qemu: kernel.elf
 	${QEMU} \
 	  -machine virt \
+	  -smp 2 \
 	  -bios default \
 	  -nographic -serial mon:stdio \
 	  --no-reboot \
